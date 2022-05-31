@@ -8,6 +8,9 @@ const Home = () => {
         <li>
           <Link to="/modal">Modal</Link>
         </li>
+        <li>
+          <Link to="/accordion">Accordion</Link>
+        </li>
       </ul>
     </div>
   );

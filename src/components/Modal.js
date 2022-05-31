@@ -92,6 +92,17 @@ const Body = ({ children }) => {
   return <BodyWrapper>{children}</BodyWrapper>;
 };
 
+const variants = {
+  open: {
+    opacity: 1,
+    y: 0,
+  },
+  close: {
+    opacity: 0,
+    y: -100,
+  },
+};
+
 const Modal = ({ isOpen, toggle, backdrop = 30, size = "md", children }) => {
   const ref = useRef(null);
 
@@ -109,19 +120,12 @@ const Modal = ({ isOpen, toggle, backdrop = 30, size = "md", children }) => {
             <ModalBox
               ref={ref}
               size={size}
-              animate={{
-                opacity: [0, 1],
-                y: [-100, 0],
-                transition: {
-                  duration: 0.3,
-                },
-              }}
-              exit={{
-                opacity: 0,
-                y: -100,
-                transition: {
-                  duration: 0.2,
-                },
+              variants={variants}
+              initial="close"
+              animate="open"
+              exit="close"
+              transition={{
+                duration: 0.2,
               }}
             >
               {children}

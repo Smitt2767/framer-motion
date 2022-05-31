@@ -1,23 +1,6 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import { Button, Center } from "../components";
 import Modal from "../components/Modal";
-
-const Center = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-`;
-
-const Button = styled.button`
-  padding: 10px 20px;
-  background-color: ${({ color = "palevioletred" }) => `${color}`};
-  border: 0;
-  color: white;
-  border-radius: 5px;
-  font-size: 20px;
-  cursor: pointer;
-`;
 
 const ModalPage = () => {
   const [isOpen, setIsOpen] = useState(false);
