@@ -6,6 +6,9 @@ const Home = () => {
     <div className="app">
       <ul>
         <li>
+          <Link to="/animations">Animations</Link>
+        </li>
+        <li>
           <Link to="/modal">Modal</Link>
         </li>
         <li>
