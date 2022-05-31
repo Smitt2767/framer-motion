@@ -11,6 +11,9 @@ const Home = () => {
         <li>
           <Link to="/accordion">Accordion</Link>
         </li>
+        <li>
+          <Link to="/canvas">Canvas</Link>
+        </li>
       </ul>
     </div>
   );

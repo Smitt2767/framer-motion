@@ -16,3 +16,31 @@ export const Button = styled.button`
   font-size: 20px;
   cursor: pointer;
 `;
+
+export const Backdrop = styled.div`
+  position: fixed;
+  inset: 0;
+  background-color: #000000;
+  z-index: 10;
+  opacity: ${({ opacity }) => opacity / 100};
+`;
+
+export const HeaderWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  & h4 {
+    margin: 0;
+    font-size: 20px;
+  }
+  & .close {
+    cursor: pointer;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    font-size: 20px;
+  }
+`;

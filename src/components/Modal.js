@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import styled from "styled-components";
 import { GrClose } from "react-icons/gr";
 import useOutsideClick from "../hooks/useOutsideClick";
+import { Backdrop, HeaderWrapper } from ".";
 
 const sizes = {
   sm: 350,
@@ -11,14 +12,6 @@ const sizes = {
   lg: 700,
   xl: 900,
 };
-
-const Backdrop = styled.div`
-  position: fixed;
-  inset: 0;
-  background-color: #000000;
-  z-index: 10;
-  opacity: ${({ opacity }) => opacity / 100};
-`;
 
 const Wrapper = styled.div`
   position: fixed;
@@ -38,26 +31,6 @@ const ModalBox = motion(styled.div`
   border-radius: 5px;
   margin: 5% auto 5% auto;
 `);
-
-const HeaderWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px;
-  & h4 {
-    margin: 0;
-    font-size: 20px;
-  }
-  & .close {
-    cursor: pointer;
-    border: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    font-size: 20px;
-  }
-`;
 
 const BodyWrapper = styled.div`
   border-top: 1px solid #ccc;
@@ -131,7 +104,7 @@ const Modal = ({ isOpen, toggle, backdrop = 30, size = "md", children }) => {
               {children}
             </ModalBox>
           </Wrapper>
-          <Backdrop opacity={backdrop} onClick={toggle} />
+          <Backdrop opacity={backdrop} />
         </modalContext.Provider>
       )}
     </AnimatePresence>

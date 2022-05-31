@@ -1,0 +1,40 @@
+import React, { useState } from "react";
+import { Button, Center } from "../components";
+import Canvas from "../components/Canvas";
+
+const CanvasPage = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  return (
+    <Center>
+      <Button onClick={toggle}>Open</Button>
+      <Canvas isOpen={isOpen} toggle={toggle}>
+        <Canvas.Header>Minim cupidatat</Canvas.Header>
+        <Canvas.Body>
+          Consectetur pariatur id voluptate pariatur voluptate veniam ex
+          excepteur elit esse ad culpa veniam aute. In cillum elit quis nostrud
+          ipsum elit exercitation proident eu ullamco ullamco ea. Aliquip do
+          commodo anim laboris velit laborum reprehenderit Lorem cupidatat
+          reprehenderit voluptate dolor deserunt minim. Laboris mollit dolor
+          proident duis laborum dolore sint elit et in irure duis labore. Sint
+          adipisicing reprehenderit irure in. Incididunt consectetur minim elit
+          ad id sint adipisicing pariatur dolor do Lorem incididunt. Cillum est
+          qui proident mollit eu deserunt ad ullamco reprehenderit. Officia nisi
+          in sint aliqua occaecat labore cillum eu.
+        </Canvas.Body>
+        <Canvas.Footer>
+          <Button color="#e92828" onClick={toggle}>
+            Close
+          </Button>
+          <Button color="#4c47d2">Submit</Button>
+        </Canvas.Footer>
+      </Canvas>
+    </Center>
+  );
+};
+
+export default CanvasPage;
