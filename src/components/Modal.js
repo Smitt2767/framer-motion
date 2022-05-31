@@ -70,7 +70,7 @@ const variants = {
     opacity: 1,
     y: 0,
   },
-  close: {
+  closed: {
     opacity: 0,
     y: -100,
   },
@@ -94,9 +94,9 @@ const Modal = ({ isOpen, toggle, backdrop = 30, size = "md", children }) => {
               ref={ref}
               size={size}
               variants={variants}
-              initial="close"
+              initial="closed"
               animate="open"
-              exit="close"
+              exit="closed"
               transition={{
                 duration: 0.2,
               }}

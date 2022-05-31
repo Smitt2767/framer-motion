@@ -57,7 +57,7 @@ const Footer = ({ children }) => {
 };
 
 const variants = {
-  close: { x: "100%" },
+  closed: { x: "100%" },
   open: { x: 0 },
 };
 
@@ -74,9 +74,9 @@ const Canvas = ({ isOpen, toggle, backdrop = 30, children }) => {
           <>
             <Box
               variants={variants}
-              initial="close"
+              initial="closed"
               animate="open"
-              exit="close"
+              exit="closed"
               transition={{
                 dumping: 300,
               }}

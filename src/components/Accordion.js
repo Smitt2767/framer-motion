@@ -68,7 +68,7 @@ const AccordionItemHeader = ({ children }) => {
 
 const variants = {
   open: { height: "auto" },
-  close: { height: 0 },
+  closed: { height: 0 },
 };
 
 const AccordionItemBody = ({ children }) => {
@@ -82,9 +82,9 @@ const AccordionItemBody = ({ children }) => {
       {isActive && (
         <Body
           variants={variants}
-          initial="close"
+          initial="closed"
           animate="open"
-          exit="close"
+          exit="closed"
           transition={{
             damping: 10,
           }}
