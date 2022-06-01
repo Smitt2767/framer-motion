@@ -37,9 +37,13 @@ const ItemHeader = styled.p`
       : css``};
 `;
 const Body = motion(styled.div`
-  padding: 10px 15px;
   overflow: hidden;
+  padding: 0;
 `);
+
+const ContentBox = styled.div`
+  padding: 10px 15px;
+`;
 
 const AccordionItem = ({ children, targetId }) => {
   return (
@@ -67,8 +71,8 @@ const AccordionItemHeader = ({ children }) => {
 };
 
 const variants = {
-  open: { height: "auto" },
-  closed: { height: 0 },
+  open: { opacity: 1, height: "auto", scale: 1, y: 0 },
+  closed: { opacity: 0, height: 0, scale: 0.9, y: 10 },
 };
 
 const AccordionItemBody = ({ children }) => {
@@ -78,18 +82,19 @@ const AccordionItemBody = ({ children }) => {
   const isActive = open === targetId;
 
   return (
-    <AnimatePresence>
+    <AnimatePresence exitBeforeEnter initial={false}>
       {isActive && (
         <Body
           variants={variants}
           initial="closed"
           animate="open"
           exit="closed"
+          key="content"
           transition={{
             damping: 10,
           }}
         >
-          {children}
+          <ContentBox>{children}</ContentBox>
         </Body>
       )}
     </AnimatePresence>
