@@ -89,7 +89,6 @@ const AccordionItemBody = ({ children }) => {
           initial="closed"
           animate="open"
           exit="closed"
-          key="content"
           transition={{
             damping: 10,
           }}

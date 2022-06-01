@@ -5,6 +5,7 @@ import Breadcrumb from "../../components/Breadcrumb";
 import AnimationFive from "./AnimationFive";
 import AnimationFour from "./AnimationFour";
 import AnimationOne from "./AnimationOne";
+import AnimationSix from "./AnimationSix";
 import AnimationThree from "./AnimationThree";
 import AnimationTwo from "./AnimationTwo";
 
@@ -25,11 +26,12 @@ const Animations = () => {
         <Breadcrumb.Item active>Animations</Breadcrumb.Item>
       </Breadcrumb>
       <Wrapper>
-        <AnimationOne />
-        <AnimationTwo />
-        <AnimationThree />
-        <AnimationFour />
-        <AnimationFive />
+        <AnimationOne /> <hr />
+        <AnimationTwo /> <hr />
+        <AnimationThree /> <hr />
+        <AnimationFour /> <hr />
+        <AnimationFive /> <hr />
+        <AnimationSix /> <hr />
       </Wrapper>
     </>
   );

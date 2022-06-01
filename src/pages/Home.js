@@ -1,22 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+const links = [
+  { path: "/animations", title: "Animations" },
+  { path: "/modal", title: "Modal" },
+  { path: "/accordion", title: "Accordion" },
+  { path: "/canvas", title: "Canvas" },
+].sort((a, b) => (a.title > b.title ? 1 : -1));
+
 const Home = () => {
   return (
     <div className="app">
       <ul>
-        <li>
-          <Link to="/animations">Animations</Link>
-        </li>
-        <li>
-          <Link to="/modal">Modal</Link>
-        </li>
-        <li>
-          <Link to="/accordion">Accordion</Link>
-        </li>
-        <li>
-          <Link to="/canvas">Canvas</Link>
-        </li>
+        {links.map((link) => (
+          <li key={link.path}>
+            <Link to={link.path}>{link.title}</Link>
+          </li>
+        ))}
       </ul>
     </div>
   );

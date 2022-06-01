@@ -9,8 +9,6 @@ const variants = {
     transition: {
       type: "spring",
       stiffness: 50,
-      duration: 5,
-      dumping: 500,
     },
   }),
 };

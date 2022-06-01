@@ -4,8 +4,10 @@ import styled from "styled-components";
 const Box = styled.div`
   height: 200px;
   width: 200px;
+  min-height: 200px;
+  min-width: 200px;
   cursor: pointer;
-  background-color: #00ffa9;
+  background-color: ${({ color = "#00ffa9" }) => `${color}`};
   display: flex;
   align-items: center;
   justify-content: center;
