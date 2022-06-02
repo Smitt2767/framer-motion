@@ -49,16 +49,16 @@ const AnimationFive = () => {
     <>
       <ButtonContainer>
         <Button onClick={onMoveLeft}>Move Left</Button>
-        <Button onClick={onMoveRight} color="#7d70db">
+        <Button onClick={onMoveRight} color="blue">
           Move Right
         </Button>
-        <Button onClick={onCircle} color="#70d5db">
+        <Button onClick={onCircle} color="skyBlue">
           Circle
         </Button>
-        <Button onClick={onSquare} color="#70db92">
+        <Button onClick={onSquare} color="green">
           Square
         </Button>
-        <Button onClick={control.stop} color="#dbaa70">
+        <Button onClick={control.stop} color="orange">
           Stop
         </Button>
       </ButtonContainer>

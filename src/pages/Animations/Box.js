@@ -7,7 +7,8 @@ const Box = styled.div`
   min-height: 200px;
   min-width: 200px;
   cursor: pointer;
-  background-color: ${({ color = "#00ffa9" }) => `${color}`};
+  background-color: ${({ theme: { colors }, color = "green" }) =>
+    `${colors[color] ? colors[color] : color}`};
   display: flex;
   align-items: center;
   justify-content: center;

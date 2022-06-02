@@ -9,7 +9,8 @@ export const Center = styled.div`
 
 export const Button = styled.button`
   padding: 10px 20px;
-  background-color: ${({ color = "palevioletred" }) => `${color}`};
+  background-color: ${({ color = "pink", theme: { colors } }) =>
+    `${colors[color] ? colors[color] : color}`};
   border: 0;
   color: white;
   border-radius: 5px;

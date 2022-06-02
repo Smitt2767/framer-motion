@@ -11,12 +11,12 @@ const Wrapper = styled.div`
 
 const AnimationSix = () => {
   const [colors, setColors] = useState([
-    "#7d70db",
-    "#70d5db",
-    "#70db92",
-    "#dbaa70",
+    "blue",
+    "skyBlue",
+    "green",
+    "orange",
     "#db8370",
-    "#db70da",
+    "pink",
   ]);
 
   const shuffle = () => setColors(shuffleArray);

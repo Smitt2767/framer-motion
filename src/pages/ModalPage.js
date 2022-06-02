@@ -30,10 +30,10 @@ const ModalPage = () => {
             consectetur elit.
           </Modal.Body>
           <Modal.Footer className="">
-            <Button color="#e92828" onClick={toggle}>
+            <Button color="red" onClick={toggle}>
               Close
             </Button>
-            <Button color="#4c47d2">Submit</Button>
+            <Button color="darkBlue">Submit</Button>
           </Modal.Footer>
         </Modal>
       </Center>
