@@ -26,7 +26,7 @@ const AnimationSix = () => {
       <Button onClick={shuffle}>Shuffle</Button>
       <Wrapper>
         {colors.map((color) => (
-          <Box layout key={color} color={color}>
+          <Box layoutId={color} key={color} color={color}>
             {color}
           </Box>
         ))}

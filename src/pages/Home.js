@@ -7,6 +7,7 @@ const links = [
   { path: "/accordion", title: "Accordion" },
   { path: "/canvas", title: "Canvas" },
   { path: "/switch", title: "Switch" },
+  { path: "/tabs", title: "Tabs" },
 ].sort((a, b) => (a.title > b.title ? 1 : -1));
 
 const Home = () => {

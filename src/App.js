@@ -7,6 +7,7 @@ import CanvasPage from "./pages/CanvasPage";
 import Home from "./pages/Home";
 import ModalPage from "./pages/ModalPage";
 import SwitchPage from "./pages/SwitchPage";
+import TabsPage from "./pages/TabsPage";
 import theme from "./theme";
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Route path={"/accordion"} exact component={AccordionPage} />
         <Route path={"/canvas"} exact component={CanvasPage} />
         <Route path={"/switch"} exact component={SwitchPage} />
+        <Route path={"/tabs"} exact component={TabsPage} />
       </Switch>
     </ThemeProvider>
   );
