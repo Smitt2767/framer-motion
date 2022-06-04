@@ -11,20 +11,27 @@ const TabButton = styled.button`
   border: 0;
   padding: 10px 20px;
   font-weight: 600;
+  background-color: transparent;
   ${({ selected, color, theme: { colors } }) => css`
-    background-color: ${selected ? `${colors[color]}cc` : `transparent`};
     color: ${selected ? "#fff" : colors[color]};
   `};
+  z-index: 10;
 `;
 
-const BottomLine = motion(styled.div`
-  border-top: ${({ theme: { colors }, color }) => `3px solid ${colors[color]}`};
-  width: 100%;
-`);
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
+  position: relative;
 `;
+const ButtonBG = motion(styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: ${({ theme: { colors }, color }) => `${colors[color]}`};
+  z-index: 5;
+`);
 const TabsContainer = styled.div`
   display: flex;
   border-radius: 5px;
@@ -47,9 +54,7 @@ const Tab = ({ children, value }) => {
         {children}
       </TabButton>
 
-      {selected && (
-        <BottomLine layoutId="underline" selected={selected} color={color} />
-      )}
+      {selected && <ButtonBG layoutId="bg" selected={selected} color={color} />}
     </ButtonContainer>
   );
 };
